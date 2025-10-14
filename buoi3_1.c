@@ -8,26 +8,23 @@ void initStack(Stack *s)
 
 void push(Stack *s, int val)
 {
+    if(s->size == 100) return;
     s->infor[s->size++] = val;
 }
 
-void pop(Stack *s)
+int pop(Stack *s)
 {
+    int val;
+    if(!s->size) return 0;
+    val = s->infor[s->size];
     s->size--;
-}
-
-void pop_get_value(Stack *s, int *val)
-{
-    if (s->size > 0) {
-        *val = s->infor[s->size - 1];
-        s->size--;
-    }
+    return val;
 }
 
 int peek(Stack *s)
 {
     if(!s->size) return 0;
-    return s->infor[s->size-1];
+    return s->infor[s->size];
 }
 
 void display(Stack *s)

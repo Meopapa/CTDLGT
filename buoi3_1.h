@@ -13,7 +13,7 @@ typedef struct
 
 void initStack(Stack *s);
 void push(Stack *s, int val);
-void pop(Stack *s);
+int pop(Stack *s);
 void pop_get_value(Stack *s, int *val);
 int peek(Stack *s);
 void display(Stack *s);
