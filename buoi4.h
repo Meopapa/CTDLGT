@@ -1,13 +1,21 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 
-#include<stdio.h>
+#include <stdio.h>
+#include "buoi_5.h"
 
 #define MAX 50
 
-typedef struct
+typedef struct Cell
+{
+    float num;
+    char* str;
+}Cell;
+
+typedef struct Queue
 {
     float infor[MAX];
+    Cell information[MAX];
     int front;
     int rear;
 }Queue;
@@ -29,6 +37,9 @@ float QUEUE_GetLoop(Queue* q);
 float QUEUE_PeekFrontLoop(Queue* q);
 float QUEUE_PeekRearLoop(Queue* q);
 void QUEUE_DisplayLoop(Queue* q);
+
+void QUEUE_SortByLL(Queue* q, Node* ll_sort);
+void QUEUE_AddByLL(Queue* q, Node ll);
 
 #endif
 
