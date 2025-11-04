@@ -21,11 +21,6 @@ int QUEUE_IsEmpty(QueueLL* q)
     return q->front == NULL;
 }
 
-int QUEUE_IsFull(QueueLL* q)
-{
-    return 0; 
-}
-
 void QUEUE_Add(QueueLL* q, float val)
 {
     Node* newNode = (Node*)malloc(sizeof(Node));

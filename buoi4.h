@@ -2,7 +2,6 @@
 #define QUEUE_H
 
 #include <stdio.h>
-#include "buoi_5.h"
 
 #define MAX 50
 
@@ -37,9 +36,6 @@ float QUEUE_GetLoop(Queue* q);
 float QUEUE_PeekFrontLoop(Queue* q);
 float QUEUE_PeekRearLoop(Queue* q);
 void QUEUE_DisplayLoop(Queue* q);
-
-void QUEUE_SortByLL(Queue* q, Node* ll_sort);
-void QUEUE_AddByLL(Queue* q, Node ll);
 
 #endif
 
