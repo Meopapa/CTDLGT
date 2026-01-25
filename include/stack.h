@@ -1,6 +1,8 @@
 #ifndef STACK_H
 #define STACK_H
 
+#include <stdio.h>
+#include <stdlib.h>
 #include "include\data_structure.h"
 
 #define STACK_DECLARE_INIT(type, number) \

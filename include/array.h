@@ -1,6 +1,8 @@
 #ifndef ARRAY_H
 #define ARRAY_H
 
+#include <stdio.h>
+#include <stdlib.h>
 #include "include\data_structure.h"
 
 #define TENSOR_DECLARE_INIT(type, dimension) \

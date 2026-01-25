@@ -1,6 +1,8 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 
+#include <stdio.h>
+#include <stdlib.h>
 #include "include\data_structure.h"
 
 #define QUEUE_DECLARE_INIT(type, number) \
