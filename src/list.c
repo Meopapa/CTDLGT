@@ -37,9 +37,11 @@
     { \
         if(l == NULL) return ERROR_NULL_PTR; \
         if(head == NULL) return ERROR_EMPTY; \
-        while(head->next_ptr != NULL) head = head->next_ptr; \
-        head->next_ptr = l; \
-        l->pre_ptr = head; \
+        List_##type1##_##type2##_##type3 *L; \
+        L = head; \
+        while(L->next_ptr != NULL) L = L->next_ptr; \
+        L->next_ptr = l; \
+        l->pre_ptr = L; \
     } \
     int LIST_InsertMiddle_##type1##_##type2##_##type3(type1 *m1, type2 *m2, type3 *m3, List_##type1##_##type2##_##type3 *l_insert);
 #define LIST_IMPLEMENT_DELETE(type1, type2, type3, head) \
@@ -53,9 +55,10 @@
     } \
     int LIST_DeleteBack_##type1##_##type2##_##type3() \
     { \
-        while(head->next_ptr->next_ptr != NULL) head = head->next_ptr; \
-        free(head->next_ptr); \
-        head->next_ptr = NULL; \
+        List_##type1##_##type2##_##type3 *L; \
+        while(L->next_ptr->next_ptr != NULL) L = L->next_ptr; \
+        free(L->next_ptr); \
+        L->next_ptr = NULL; \
     } \
     int LIST_DeleteMiddle_##type1##_##type2##_##type3(type1 *m1, type2 *m2, type3 *m3);
 #define LIST_IMPLEMENT_TRAVERSE() \
