@@ -56,9 +56,9 @@
     int LIST_DeleteBack_##type1##_##type2##_##type3() \
     { \
         List_##type1##_##type2##_##type3 *L; \
-        while(L->next_ptr->next_ptr != NULL) L = L->next_ptr; \
-        free(L->next_ptr); \
-        L->next_ptr = NULL; \
+        while(L->next_ptr != NULL) L = L->next_ptr; \
+        L->pre_ptr->next_ptr = NULL; \
+        free(L); \
     } \
     int LIST_DeleteMiddle_##type1##_##type2##_##type3(type1 *m1, type2 *m2, type3 *m3);
 #define LIST_IMPLEMENT_TRAVERSE() \

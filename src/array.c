@@ -25,16 +25,16 @@
     type* TENSOR_Locate_##type(Tensor_##type##_##dimension *t, int r, int c, int d) \
     { \
         if(t == NULL) return NULL; \
-        int index = r * (t->cols * t->depth) + c * (t->depth) + d; \
+        int index = r * (t->column * t->depth) + c * (t->depth) + d; \
         return &(t->data[index]); \
     } \
-    int TENSOR_transpose_##type(Tensor_##type##_##dimension *t, int nr, int nc, int nd) \
+    int TENSOR_reshape_##type(Tensor_##type##_##dimension *t, int new_r, int new_c, int new_d) \
     { \
         if(t == NULL) return ERROR_NULL_PTR; \
-        if ((new_r * new_c * new_d) == (t->rows * t->cols * t->depth)) \
+        if ((new_r * new_c * new_d) == (t->row * t->column * t->depth)) \
         { \
-        t->rows = new_r; \
-        t->cols = new_c; \
+        t->row = new_r; \
+        t->column = new_c; \
         t->depth = new_d; \
         return SUCCESS_TRUE; \
         } \
@@ -44,11 +44,11 @@
     int TENSOR_transpose_##type(Tensor_##type##_##dimension *src, Tensor_##type##_##dimension *dst) \
     { \
         if(src == NULL || dst == NULL) return ERROR_NULL_PTR; \
-        TENSOR_Initialize_##type(dst, src->cols, src->rows, src->depth); \
+        TENSOR_Initialize_##type(dst, src->column, src->row, src->depth); \
         \
-        for (int r = 0; r < src->rows; r++) \
+        for (int r = 0; r < src->row; r++) \
         { \
-            for (int c = 0; c < src->cols; c++) \
+            for (int c = 0; c < src->column; c++) \
             { \
                 for (int d = 0; d < src->depth; d++) \
                 { \

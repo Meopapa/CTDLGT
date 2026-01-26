@@ -7,7 +7,7 @@
     { \
         type *data; \
         int column, row, depth; \
-    }Tensor_##type##_##dimenion; \
+    }Tensor_##type##_##dimension; \
 
 #define STACK_STRUCT(type, number) \
     typedef struct Stack_##type##_##number \

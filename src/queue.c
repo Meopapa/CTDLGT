@@ -6,7 +6,7 @@
     int QUEUE_Init_##type(Queue_##type##_##number *q) \
     { \
         if(q == NULL) return ERROR_NULL_PTR; \
-        q->front = q->rear = -1; \
+        q->front = q->rear = 0; \
         q->count = 0; \
         return SUCCESS_TRUE; \
     }
@@ -26,20 +26,20 @@
     { \
         if(q == NULL) return ERROR_NULL_PTR; \
         if(QUEUE_IsFull_##type(q)) return FAIL_FALSE; \
+        q->data[q->rear] = n; \
         q->rear = (q->rear + 1) % number; \
-        q->data[rear] = n; \
         return SUCCESS_TRUE; \
     } \
     type QUEUE_Dequeue_##type(Queue_##type##_##number *q) \
     { \
         if(q == NULL) return (type)ERROR_NULL_PTR; \
         if(QUEUE_IsEmpty_##type(q)) return (type)FAIL_FALSE; \
-        type dequeue = q->data[front]; \
+        type dequeue = q->data[q->front]; \
         q->front = (q->front + 1) % number; \
         return dequeue; \
     } \
     type QUEUE_Peek_##type(Queue_##type##_##number *q) \
     { \
         if(q == NULL) return (type)ERROR_NULL_PTR; \
-        return q->data[front]; \
+        return q->data[q->front]; \
     } 
