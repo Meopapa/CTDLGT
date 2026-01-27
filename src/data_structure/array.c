@@ -1,6 +1,6 @@
-#include "include\dsa_configs.h"
-#include "include\data_structure.h"
-#include "include\array.h"
+#include "include\data_structure\dsa_configs.h"
+#include "include\data_structure\data_structure.h"
+#include "include\data_structure\array.h"
 
 #define TENSOR_IMPLEMENT_INIT(type, dimension) \
     int TENSOR_Initialize_##type(Tensor_##type##_##dimension *t, int r, int c, int d) \

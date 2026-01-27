@@ -3,8 +3,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "include\data_structure.h"
-#include "include\dsa_configs.h"
+#include "include\data_structure\data_structure.h"
+#include "include\data_structure\dsa_configs.h"
 
 // SearchBinaryTree
 #define TREE_DECLARE_INIT(type) \

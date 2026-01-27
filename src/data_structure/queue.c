@@ -1,6 +1,6 @@
-#include "include\data_structure.h"
-#include "include\dsa_configs.h"
-#include "include\queue.h"
+#include "include\data_structure\data_structure.h"
+#include "include\data_structure\dsa_configs.h"
+#include "include\data_structure\queue.h"
 
 #define QUEUE_IMPLEMENT_INIT(type, number) \
     int QUEUE_Init_##type(Queue_##type##_##number *q) \

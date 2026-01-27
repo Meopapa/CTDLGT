@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "include\dsa_configs.h"
-#include "include\data_structure.h"
-#include "include\list.h"
+#include "include\data_structure\dsa_configs.h"
+#include "include\data_structure\data_structure.h"
+#include "include\data_structure\list.h"
 
 #define LIST_IMPLEMENT_INIT(type1, type2, type3, head) \
     int LIST_Init_##type1##_##type2##_##type3() \

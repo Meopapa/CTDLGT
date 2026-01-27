@@ -1,6 +1,6 @@
-#include "include\data_structure.h"
-#include "include\dsa_configs.h"
-#include "include\stack.h"
+#include "include\data_structure\data_structure.h"
+#include "include\data_structure\dsa_configs.h"
+#include "include\data_structure\stack.h"
 
 #define STACK_IMPLEMENT_INIT(type, number) \
     int STACK_Init_##type(Stack_##type##_##number *s) \

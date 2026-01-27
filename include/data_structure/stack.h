@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "include\data_structure.h"
+#include "include\data_structure\data_structure.h"
 
 #define STACK_DECLARE_INIT(type, number) \
     int STACK_Init_##type(Stack_##type##_##number *s);

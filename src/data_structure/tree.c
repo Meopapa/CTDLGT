@@ -1,6 +1,6 @@
-#include "include\tree.h"
-#include "include\data_structure.h"
-#include "include\dsa_configs.h"
+#include "include\data_structure\tree.h"
+#include "include\data_structure\data_structure.h"
+#include "include\data_structure\dsa_configs.h"
 
 // search binary tree
 #define TREE_IMPLEMENT_INIT(type) \

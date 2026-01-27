@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "include\data_structure.h"
+#include "include\data_structure\data_structure.h"
 
 #define QUEUE_DECLARE_INIT(type, number) \
     int QUEUE_Init_##type(Queue_##type##_##number *q);

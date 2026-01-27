@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "include\data_structure.h"
+#include "include\data_structure\data_structure.h"
 
 #define LIST_DECLARE_INIT(type1, type2, type3, head) \
     int LIST_Init_##type1##_##type2##_##type3(); \
