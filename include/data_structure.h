@@ -34,5 +34,12 @@
     }List_##type1##_##type2##_##type3;
 
 // Non-linear data structure
+#define TREE_STRUCT(type) \
+    typedef struct TreeNode_##type \
+    { \
+        type data; \
+        struct BinaryTree_##type *left; \
+        struct BinaryTree_##type *right; \
+    }TreeNode_##type;
 
 #endif
