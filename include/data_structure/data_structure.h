@@ -7,7 +7,7 @@
     { \
         type *data; \
         int column, row, depth; \
-    }Tensor_##type##_##dimension; \
+    } Tensor_##type##_##dimension;
 
 #define STACK_STRUCT(type, number) \
     typedef struct Stack_##type##_##number \
@@ -22,6 +22,13 @@
         type data[number]; \
         int front, rear, count; \
     }Queue_##type##_##number;
+
+#define HEAP_STRUCT(type, number) \
+    typedef struct Heap_##type##_##number \
+    { \
+        type data[number]; \
+        int size; \
+    }Heap_##type##_##number;
 
 #define LIST_STRUCT(type1, type2, type3) \
     typedef struct List_##type1##_##type2##_##type3 \
@@ -38,8 +45,8 @@
     typedef struct TreeNode_##type \
     { \
         type data; \
-        struct BinaryTree_##type *left; \
-        struct BinaryTree_##type *right; \
+        struct TreeNode_##type *left; \
+        struct TreeNode_##type *right; \
     }TreeNode_##type;
 
 #endif

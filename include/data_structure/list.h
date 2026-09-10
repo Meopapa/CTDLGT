@@ -3,7 +3,24 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "include\data_structure\data_structure.h"
+#include "data_structure/data_structure.h"
+
+#define LIST_DECLARE(type1, type2, type3) \
+    int LIST_Init_##type1##_##type2##_##type3(List_##type1##_##type2##_##type3 **head); \
+    int LIST_Free_##type1##_##type2##_##type3(List_##type1##_##type2##_##type3 **head); \
+    int LIST_InsertFront_##type1##_##type2##_##type3(List_##type1##_##type2##_##type3 **head, List_##type1##_##type2##_##type3 *node); \
+    int LIST_InsertBack_##type1##_##type2##_##type3(List_##type1##_##type2##_##type3 **head, List_##type1##_##type2##_##type3 *node); \
+    int LIST_DeleteFront_##type1##_##type2##_##type3(List_##type1##_##type2##_##type3 **head); \
+    int LIST_DeleteBack_##type1##_##type2##_##type3(List_##type1##_##type2##_##type3 **head); \
+    int LIST_Size_##type1##_##type2##_##type3(List_##type1##_##type2##_##type3 *head);
+
+#endif
+#ifndef LIST_H
+#define LIST_H
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "data_structure/data_structure.h"
 
 #define LIST_DECLARE_INIT(type1, type2, type3, head) \
     int LIST_Init_##type1##_##type2##_##type3(); \
@@ -16,7 +33,7 @@
     int LIST_DeleteFront_##type1##_##type2##_##type3(); \
     int LIST_DeleteBack_##type1##_##type2##_##type3(); \
     int LIST_DeleteMiddle_##type1##_##type2##_##type3(type1 *m1, type2 *m2, type3 *m3);
-#define LIST_DECLARE_TRAVERSE() \
+#define LIST_DECLARE_TRAVERSE(type1, type2, type3) \
     int LIST_Traverse_##type1##_##type2##_##type3();
 
 #endif 

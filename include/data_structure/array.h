@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "include\data_structure\data_structure.h"
+#include "data_structure/data_structure.h"
 
 #define TENSOR_DECLARE_INIT(type, dimension) \
     int TENSOR_Initialize_##type(Tensor_##type##_##dimension *t, int r, int c, int d); \

@@ -1,6 +1,6 @@
-#include "include\data_structure\dsa_configs.h"
-#include "include\data_structure\data_structure.h"
-#include "include\data_structure\array.h"
+#include "data_structure/dsa_configs.h"
+#include "data_structure/data_structure.h"
+#include "data_structure/array.h"
 
 #define TENSOR_IMPLEMENT_INIT(type, dimension) \
     int TENSOR_Initialize_##type(Tensor_##type##_##dimension *t, int r, int c, int d) \
@@ -59,3 +59,11 @@
         } \
         return SUCCESS_TRUE; \
     }
+
+TENSOR_STRUCT(int, 3)
+TENSOR_DECLARE_INIT(int, 3)
+TENSOR_DECLARE_LOCATE(int, 3)
+TENSOR_DECLARE_TRANSPOSE(int, 3)
+TENSOR_IMPLEMENT_INIT(int, 3)
+TENSOR_IMPLEMENT_LOCATE(int, 3)
+TENSOR_IMPLEMENT_TRANSPOSE(int, 3)
